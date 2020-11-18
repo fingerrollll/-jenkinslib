@@ -1,0 +1,17 @@
+#!groovy
+@Library('jenkinslib')_
+
+def tools = org.devops.tools()
+
+pipeline {
+	agent any
+
+	stages {
+		stage('hello'){
+			steps{
+				tools.PrintMes('opting')
+			}
+
+		}
+	}
+}
